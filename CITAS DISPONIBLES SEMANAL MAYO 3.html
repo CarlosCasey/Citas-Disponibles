@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Citas Disponibles</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .tab-container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        .tab {
+            padding: 10px 20px;
+            cursor: pointer;
+            background-color: #ddd;
+            border: 1px solid #ccc;
+            border-radius: 8px 8px 0 0;
+            margin: 0 5px;
+        }
+        .tab.active {
+            background-color: #fff;
+            border-bottom: none;
+        }
+        .tab-content {
+            display: none;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 0 0 8px 8px;
+            padding: 20px;
+            width: 100%;
+            max-width: 1200px;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        .cita-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        .cita {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            width: 300px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .cita-title {
+            font-size: 1.5em;
+            color: #555;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .cita-horarios {
+            list-style-type: none;
+            padding: 0;
+        }
+        .cita-horarios li {
+            background-color: #e6e6fa; /* Lavanda */
+            border-radius: 4px;
+            margin-bottom: 10px;
+            padding: 10px;
+            text-align: center;
+        }
+        .footer {
+            margin-top: 40px;
+            font-size: 0.9em;
+            color: #777;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>CITAS DISPONIBLES</h1>
+    
+    <div class="tab-container">
+        <div class="tab active" onclick="showTab('lunes')">Lunes</div>
+        <div class="tab" onclick="showTab('martes')">Martes</div>
+        <div class="tab" onclick="showTab('miercoles')">Miércoles</div>
+        <div class="tab" onclick="showTab('jueves')">Jueves</div>
+        <div class="tab" onclick="showTab('viernes')">Viernes</div>
+    </div>
+    
+    <div id="lunes" class="tab-content active">
+         <h2>Fecha: 20/05/2024</h2>
+    <div class="cita-container">
+        <div class="cita">
+            <div class="cita-title">Terapia Ocupacional</div>
+            <ul class="cita-horarios">
+                <li>10:45 AM</li>
+                <li>10:30 AM</li>
+                <li>01:00 PM</li>
+            </ul>
+        </div>
+        <div class="cita">
+            <div class="cita-title">Terapia Fisica Grupal</div>
+            <ul class="cita-horarios">
+                <li>8:30 PM</li>
+<li>9:45 PM</li>
+                <li>11:00 AM</li>
+		<li>11:00 AM</li>
+                <li>12:15 PM</li>
+		<li>1:15 PM</li>
+<li>1:30 PM</li>		
+            </ul>
+        </div>
+        <div class="cita">
+            <div class="cita-title">Terapia de Lenguaje</div>
+            <ul class="cita-horarios">
+                <li>9:15 AM</li>
+                <li>12:15 PM</li>
+
+            </ul>
+        </div>
+        <div class="cita">
+            <div class="cita-title">Terapia Fisica</div>
+            <ul class="cita-horarios">
+                 <li>8:35 AM</li>
+<li>9:25 AM</li>
+                <li>12:30 PM</li>
+<li>12:30 PM</li>
+<li>2:15 PM</li>
+                <li>02:30 PM</li>
+            </ul>
+</div>
+        <div class="cita">
+            <div class="cita-title">Tanque Terapéutico</div>
+            <ul class="cita-horarios">
+ <li>8:35 AM</li>                
+<li>10:05 AM</li>
+<li>11:35 AM</li>
+                <li>11:00 AM</li>
+                <li>02:30 PM</li>
+            </ul>
+</div>
+        <div class="cita">
+            <div class="cita-title">Electroestimulación Orofaringea</div>
+            <ul class="cita-horarios">
+                <li>9:30 AM</li>
+                <li>11:00 AM</li>
+                <li>02:30 PM</li>
+            </ul>
+</div>
+        <div class="cita">
+            <div class="cita-title">CEMS</div>
+            <ul class="cita-horarios">
+                <li>9:00 AM</li>
+<li>11:30 PM</li>
+                <li>1:30 AM</li>
+<li>2:00 PM</li>
+            </ul>
+</div>
+        <div class="cita">
+            <div class="cita-title">ARMEO</div>
+            <ul class="cita-horarios">
+                <li>8:30 AM</li>
+                <li>1:00 PM</li>
+                <li>02:30 PM</li>
+            </ul>
+</div>
+        <div class="cita">
+            <div class="cita-title">Valoración Social</div>
+            <ul class="cita-horarios">
+                <li>CLINICA B 9:15 AM</li>
+ <li>CLINICA B 1:30 PM</li>
+
+            </ul>
+</div>
+        <div class="cita">
+            <div class="cita-title">Valoración Clinica</div>
+            <ul class="cita-horarios">
+                <li>CLINICA A 8:00 AM</li>
+<li>CLINICA B 10:25 PM</li>
+<li>CLINICA A 12:35 PM</li>
+            </ul>
+</div>
+        <div class="cita">
+            <div class="cita-title">Terapia Física 30</div>
+            <ul class="cita-horarios">
+                <li>9:30 AM</li>
+
+            </ul>
+</div>
+        <div class="cita">
+            <div class="cita-title">Tina Hubbard</div>
+            <ul class="cita-horarios">
+                <li>10:45 AM</li>
+
+            </ul>
+
+</div>
+        <div class="cita">
+            <div class="cita-title">Terapia de lenguaje grupal</div>
+            <ul class="cita-horarios">
+                <li>1:10 PM</li>
+
+            </ul>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div id="martes" class="tab-content">
+         <h2>Fecha: 21/05/2024</h2>
+    <div class="cita-container">
+        <div class="cita">
+            <div class="cita-title">Tanque Terapéutico Grupal</div>
+            <ul class="cita-horarios">
+                <li>13:05</li>
+                <li>09:20</li>
+                <li>12:20</li>
+                <li>10:50</li>
+                <li>12:20</li>
+                <li>10:05</li>
+            </ul>
+        </div>
+        <div class="cita">
+            <div class="cita-title">Terapia Física CEMS</div>
+            <ul class="cita-horarios">
+                <li>12:00</li>
+                <li>13:30</li>
+                <li>09:00</li>
+                <li>14:00</li>
+                <li>11:00</li>
+            </ul>
+        </div>
+        <div class="cita">
+            <div class="cita-title">Neuropediatría</div>
+            <ul class="cita-horarios">
+                <li>07:30</li>
+                <li>10:15</li>
+            </ul>
+        </div>
+        <div class="cita">
+            <div class="cita-title">Terapia Física Grupal</div>
+            <ul class="cita-horarios">
+                <li>13:30</li>
+                <li>12:15</li>
+                <li>12:15</li>
+                <li>13:15</li>
+                <li>08:30</li>
+                <li>08:30</li>
+            </ul>
+        </div>
+        <div class="cita">
+            <div class="cita-title">Terapia Ocupacional Grupal</div>
+            <ul class="cita-horarios">
+                <li>08:30</li>
+            </ul>
+        </div>
+        <div class="cita">
+            <div class="cita-title">Armeo</div>
+            <ul class="cita-horarios">
+                <li>10:00</li>
+                <li>11:00</li>
+            </ul>
+        </div>
+        <div class="cita">
+            <div class="cita-title">Terapia de Lenguaje</div>
+            <ul class="cita-horarios">
+                <li>09:10</li>
+                <li>08:30</li>
+            </ul>
+        </div>
+        <div class="cita">
+            <div class="cita-title">Terapia de Lenguaje 30</div>
+            <ul class="cita-horarios">
+                <li>14:30</li>
+                <li>14:00</li>
+            </ul>
+        </div>
+        <div class="cita">
+            <div class="cita-title">Tina Hubbard</div>
+            <ul class="cita-horarios">
+                <li>09:00</li>
+            </ul>
+        </div>
+        <div class="cita">
+            <div class="cita-title">Ent Robótico de la Marcha</div>
+            <ul class="cita-horarios">
+                <li>12:40</li>
+            </ul>
+        </div>
+        <div class="cita">
+            <div class="cita-title">Ortopedia</div>
+            <ul class="cita-horarios">
+                <li>07:00</li>
+            </ul>
+        </div>
+        <div class="cita">
+            <div class="cita-title">Nutrición</div>
+            <ul class="cita-horarios">
+                <li>11:45</li>
+            </ul>
+        </div>
+        <div class="cita">
+            <div class="cita-title">Pediatría</div>
+            <ul class="cita-horarios">
+                <li>07:30</li>
+            </ul>
+        </div>
+            </div>
+        </div>
+    </div>
+    <div id="miercoles" class="tab-content">
+         <h2>Fecha: 22/05/2024</h2>
+        <div class="cita-container">
+            <div class="cita">
+                <div class="cita-title">TS Valoración Social B</div>
+                <ul class="cita-horarios">
+                    <li>08:30 AM</li>
+                </ul>
+            </div>
+            <div class="cita">
+                <div class="cita-title">TF Terapia Física Grupal</div>
+                <ul class="cita-horarios">
+                    <li>08:30 AM</li>
+                    <li>13:15 PM</li>
+                    <li>12:15 PM</li>
+                    <li>10:45 AM</li>
+                </ul>
+            </div>
+            <div class="cita">
+                <div class="cita-title">TF Terapia Física</div>
+                <ul class="cita-horarios">
+                    <li>14:15 PM</li>
+                </ul>
+            </div>
+            <div class="cita">
+                <div class="cita-title">HI Tanque Terapéutico Grupal</div>
+                <ul class="cita-horarios">
+                    <li>13:05 PM</li>
+                    <li>09:20 AM</li>
+                    <li>10:50 AM</li>
+                    <li>08:35 AM</li>
+                    <li>12:20 PM</li>
+                    <li>10:05 AM</li>
+                </ul>
+            </div>
+            <div class="cita">
+                <div class="cita-title">TF Terapia Física CEMS</div>
+                <ul class="cita-horarios">
+                    <li>13:00 PM</li>
+                    <li>14:30 PM</li>
+                    <li>13:30 PM</li>
+                    <li>10:00 AM</li>
+                </ul>
+            </div>
+            <div class="cita">
+                <div class="cita-title">IN Pediatría</div>
+                <ul class="cita-horarios">
+                    <li>12:50 PM</li>
+                </ul>
+            </div>
+            <div class="cita">
+                <div class="cita-title">VA Valoración Clínica A</div>
+                <ul class="cita-horarios">
+                    <li>13:30 PM</li>
+                    <li>14:15 PM</li>
+                </ul>
+            </div>
+            <div class="cita">
+                <div class="cita-title">TA Taller de Jarana</div>
+                <ul class="cita-horarios">
+                    <li>10:00 AM</li>
+                </ul>
+            </div>
+            <div class="cita">
+                <div class="cita-title">TF TOi Robot</div>
+                <ul class="cita-horarios">
+                    <li>13:30 PM</li>
+                </ul>
+            </div>
+            <div class="cita">
+                <div class="cita-title">TF Armeo</div>
+                <ul class="cita-horarios">
+                    <li>12:00 PM</li>
+                </ul>
+            </div>
+            <div class="cita">
+                <div class="cita-title">IN Neuropediatría</div>
+                <ul class="cita-horarios">
+                    <li>13:30 PM</li>
+                </ul>
+            </div>
+            <div class="cita">
+                <div class="cita-title">TO Terapia Ocupacional</div>
+                <ul class="cita-horarios">
+                    <li>13:40 PM</li>
+                </ul>
+            </div>
+            <div class="cita">
+                <div class="cita-title">HI Tina Remolino</div>
+                <ul class="cita-horarios">
+                    <li>13:15 PM</li>
+                </ul>
+            </div>
+            <div class="cita">
+                <div class="cita-title">TL Terapia de Lenguaje</div>
+                <ul class="cita-horarios">
+                    <li>09:30 AM</li>
+                </ul>
+            </div>
+            <div class="cita">
+                <div class="cita-title">TL Terapia de Lenguaje Grupal</div>
+                <ul class="cita-horarios">
+                    <li>13:30 PM</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div id="jueves" class="tab-content">
+        <h2>Fecha: 23/05/2024</h2>
+    <div class="cita-container">
+        <div class="cita">
+            <div class="cita-title">Terapia Física Grupal</div>
+            <ul class="cita-horarios">
+                <li>13:15</li>
+                <li>11:00</li>
+                <li>12:15</li>
+                <li>12:15</li>
+                <li>08:30</li>
+                <li>12:15</li>
+                <li>12:15</li>
+                <li>14:00</li>
+            </ul>
+        </div>
+        <div class="cita">
+            <div class="cita-title">Terapia Ocupacional</div>
+            <ul class="cita-horarios">
+                <li>12:25</li>
+                <li>08:30</li>
+            </ul>
+        </div>
+        <div class="cita">
+            <div class="cita-title">Terapia Ocupacional 30</div>
+            <ul class="cita-horarios">
+                <li>10:10</li>
+            </ul>
+        </div>
+        <div class="cita">
+            <div class="cita-title">Terapia Pulmonar</div>
+            <ul class="cita-horarios">
+                <li>13:30</li>
+            </ul>
+        </div>
+        <div class="cita">
+            <div class="cita-title">Tanque Terapéutico Ind</div>
+            <ul class="cita-horarios">
+                <li>14:15</li>
+            </ul>
+        </div>
+        <div class="cita">
+            <div class="cita-title">Ortopedia</div>
+            <ul class="cita-horarios">
+                <li>12:50</li>
+                <li>12:20</li>
+                <li>14:30</li>
+                <li>13:55</li>
+            </ul>
+        </div>
+        <div class="cita">
+            <div class="cita-title">Terapia Física CEMS</div>
+            <ul class="cita-horarios">
+                <li>14:30</li>
+            </ul>
+        </div>
+        <div class="cita">
+            <div class="cita-title">Terapia de Lenguaje</div>
+            <ul class="cita-horarios">
+                <li>12:15</li>
+            </ul>
+        </div>
+        <div class="cita">
+            <div class="cita-title">Valoración Social B</div>
+            <ul class="cita-horarios">
+                <li>13:30</li>
+            </ul>
+        </div>
+        <div class="cita">
+            <div class="cita-title">CIS</div>
+            <ul class="cita-horarios">
+                <li>12:50</li>
+            </ul>
+        </div>
+        <div class="cita">
+            <div class="cita-title">Electro diagnóstico</div>
+            <ul class="cita-horarios">
+                <li>09:00</li>
+            </ul>
+        </div>
+        <div class="cita">
+            <div class="cita-title">Nutrición</div>
+            <ul class="cita-horarios">
+                <li>07:00</li>
+            </ul>
+        </div>
+        <div class="cita">
+            <div class="cita-title">Valoración Clínica A</div>
+            <ul class="cita-horarios">
+                <li>11:50</li>
+                <li>12:35</li>
+            </ul>
+        </div>
+        <div class="cita">
+            <div class="cita-title">Apoyo Pedagógico</div>
+            <ul class="cita-horarios">
+                <li>13:10</li>
+            </ul>
+        </div>
+        <div class="cita">
+            <div class="cita-title">Tina Remolino</div>
+            <ul class="cita-horarios">
+                <li>10:45</li>
+            </ul>
+        </div>
+        <div class="cita">
+            <div class="cita-title">Valoración Social C</div>
+            <ul class="cita-horarios">
+                <li>14:15</li>
+            </ul>
+        </div>
+        </div>
+    </div>
+    <div id="viernes" class="tab-content">
+        <h2>Fecha: 24/05/2024</h2>
+    <div class="cita-container">
+        <div class="cita">
+            <div class="cita-title">Valoración Clínica A</div>
+            <ul class="cita-horarios">
+                <li>13:30</li>
+                <li>10:05</li>
+            </ul>
+        </div>
+        <div class="cita">
+            <div class="cita-title">Terapia Física Grupal</div>
+            <ul class="cita-horarios">
+                <li>08:30</li>
+                <li>09:45</li>
+                <li>11:00</li>
+                <li>12:15</li>
+                <li>12:15</li>
+            </ul>
+        </div>
+        <div class="cita">
+            <div class="cita-title">Terapia de Lenguaje</div>
+            <ul class="cita-horarios">
+                <li>12:20</li>
+                <li>10:45</li>
+            </ul>
+        </div>
+        <div class="cita">
+            <div class="cita-title">Electroestimulación Oro Faríngea</div>
+            <ul class="cita-horarios">
+                <li>12:15</li>
+            </ul>
+        </div>
+        <div class="cita">
+            <div class="cita-title">Psicología Familiar B</div>
+            <ul class="cita-horarios">
+                <li>10:10</li>
+            </ul>
+        </div>
+        <div class="cita">
+            <div class="cita-title">Terapia Física</div>
+            <ul class="cita-horarios">
+                <li>13:15</li>
+            </ul>
+        </div>
+        <div class="cita">
+            <div class="cita-title">TOi Robot</div>
+            <ul class="cita-horarios">
+                <li>14:00</li>
+                <li>11:30</li>
+            </ul>
+        </div>
+        <div class="cita">
+            <div class="cita-title">Terapia Física CEMS</div>
+            <ul class="cita-horarios">
+                <li>08:30</li>
+                <li>13:00</li>
+            </ul>
+        </div>
+        <div class="cita">
+            <div class="cita-title">Valoración Social C</div>
+            <ul class="cita-horarios">
+                <li>11:55</li>
+            </ul>
+        </div>
+        <div class="cita">
+            <div class="cita-title">Terapia de Lenguaje Grupal</div>
+            <ul class="cita-horarios">
+                <li>11:20</li>
+                <li>13:30</li>
+            </ul>
+        </div>
+        <div class="cita">
+            <div class="cita-title">Terapia Ocupacional Grupal</div>
+            <ul class="cita-horarios">
+                <li>09:10</li>
+            </ul>
+        </div>
+        <div class="cita">
+            <div class="cita-title">Tanque Terapéutico Grupal</div>
+            <ul class="cita-horarios">
+                <li>13:05</li>
+                <li>09:20</li>
+            </ul>
+        </div>
+        <div class="cita">
+            <div class="cita-title">Terapia de Lenguaje 30</div>
+            <ul class="cita-horarios">
+                <li>13:00</li>
+            </ul>
+        </div>
+        <div class="cita">
+            <div class="cita-title">Terapia Pulmonar</div>
+            <ul class="cita-horarios">
+                <li>13:30</li>
+            </ul>
+        </div>
+        <div class="cita">
+            <div class="cita-title">Terapia Ocupacional</div>
+            <ul class="cita-horarios">
+                <li>13:40</li>
+            </ul>
+        </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        Es importante revisar sus citas en su recepción, dado que estas quedan sujetas a disponibilidad.
+    </div>
+
+   <script>
+    function showTab(day) {
+        // Ocultar todos los contenidos de las pestañas
+        var contents = document.querySelectorAll('.tab-content');
+        contents.forEach(function(content) {
+            content.classList.remove('active');
+        });
+        
+        // Remover la clase active de todas las pestañas
+        var tabs = document.querySelectorAll('.tab');
+        tabs.forEach(function(tab) {
+            tab.classList.remove('active');
+        });
+        
+        // Mostrar el contenido de la pestaña seleccionada
+        document.getElementById(day).classList.add('active');
+        
+        // Añadir la clase active a la pestaña seleccionada
+        document.querySelector('.tab[onclick="showTab(\'' + day + '\')"]').classList.add('active');
+    }
+</script>
+</body>
+</html>
